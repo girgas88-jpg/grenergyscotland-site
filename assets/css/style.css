@@ -1,35 +1,35 @@
 /* GR Energy Scotland — grenergyscotland.co.uk */
 
 :root {
-  --navy: #0f2942;
-  --navy-800: #17395b;
-  --navy-600: #245078;
-  --flame: #e2680f;
-  --flame-dark: #c25709;
-  --ink: #16212c;
-  --body: #414d59;
-  --muted: #6b7885;
-  --line: #dfe5ea;
+  --navy: #16161a;
+  --navy-800: #232329;
+  --navy-600: #4a4a52;
+  --flame: #e02b2b;
+  --flame-dark: #b91f1f;
+  --ink: #1a1a1e;
+  --body: #46464e;
+  --muted: #71717a;
+  --line: #e4e4e7;
   --bg: #ffffff;
-  --bg-alt: #f4f7f9;
+  --bg-alt: #f5f5f6;
   --card: #ffffff;
   --ok: #15803d;
   --radius: 10px;
-  --shadow: 0 1px 2px rgba(15,41,66,.06), 0 8px 24px rgba(15,41,66,.07);
+  --shadow: 0 1px 2px rgba(20,20,24,.06), 0 8px 24px rgba(20,20,24,.07);
   --wrap: 1120px;
   --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --navy: #0b1a29;
-    --ink: #e8eef3;
-    --body: #b3c0cc;
-    --muted: #8d9aa7;
-    --line: #24333f;
-    --bg: #0d1720;
-    --bg-alt: #111e29;
-    --card: #142230;
+    --navy: #101013;
+    --ink: #ececf0;
+    --body: #b8b8c0;
+    --muted: #90909a;
+    --line: #2c2c33;
+    --bg: #121215;
+    --bg-alt: #18181c;
+    --card: #1d1d22;
     --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
   }
 }
@@ -63,8 +63,8 @@ h3 { font-size: 1.2rem; }
 p { margin: 0 0 1.1em; }
 p:last-child { margin-bottom: 0; }
 
-a { color: var(--navy-600); }
-@media (prefers-color-scheme: dark) { a { color: #7fb4e8; } }
+a { color: var(--flame-dark); }
+@media (prefers-color-scheme: dark) { a { color: #ff8585; } }
 
 img { max-width: 100%; height: auto; display: block; }
 
@@ -80,14 +80,14 @@ img { max-width: 100%; height: auto; display: block; }
 
 .topbar {
   background: var(--navy);
-  color: #cfe0ee;
+  color: #d6d6dc;
   font-size: .85rem;
   padding: 7px 0;
 }
 .topbar .wrap { display: flex; gap: 20px; justify-content: space-between; flex-wrap: wrap; }
 .topbar a { color: #fff; text-decoration: none; font-weight: 600; }
 .topbar a:hover { text-decoration: underline; }
-.topbar .gs { color: #cfe0ee; }
+.topbar .gs { color: #d6d6dc; }
 @media (max-width: 620px) {
   .topbar { font-size: .78rem; }
   .topbar .wrap { justify-content: center; gap: 10px; }
@@ -107,15 +107,18 @@ img { max-width: 100%; height: auto; display: block; }
   gap: 16px; min-height: 74px;
 }
 
-.brand { display: flex; align-items: center; gap: 11px; text-decoration: none; }
-.brand .mark {
-  width: 40px; height: 40px; border-radius: 9px; flex: 0 0 auto;
-  background: linear-gradient(150deg, var(--navy-600), var(--navy));
-  color: #fff; display: grid; place-items: center;
-  font-weight: 800; font-size: .95rem; letter-spacing: -.03em;
+.brand { display: flex; align-items: center; text-decoration: none; min-width: 0; }
+.brand img { height: 40px; width: auto; display: block; }
+@media (max-width: 520px) { .brand img { height: 32px; } }
+@media (prefers-color-scheme: dark) {
+  .brand img { background: #fff; padding: 6px 10px; border-radius: 8px; box-sizing: content-box; height: 30px; }
 }
-.brand b { display: block; color: var(--ink); font-size: 1.06rem; letter-spacing: -.02em; line-height: 1.2; }
-.brand span { display: block; color: var(--muted); font-size: .75rem; text-transform: uppercase; letter-spacing: .09em; }
+
+.gs-badge {
+  display: block; width: 96px; height: auto; border-radius: 8px;
+  background: #fff; padding: 6px;
+}
+.hero-card .gs-badge { margin-top: 6px; }
 
 .nav-toggle {
   display: none; background: none; border: 1px solid var(--line);
@@ -160,14 +163,14 @@ img { max-width: 100%; height: auto; display: block; }
 
 .hero {
   background: linear-gradient(155deg, var(--navy) 0%, var(--navy-800) 55%, var(--navy-600) 100%);
-  color: #e6eff7; padding: 70px 0 76px;
+  color: #ededf1; padding: 70px 0 76px;
 }
 .hero h1 { color: #fff; max-width: 17ch; }
-.hero .lede { font-size: 1.13rem; max-width: 54ch; color: #c9dcec; }
+.hero .lede { font-size: 1.13rem; max-width: 54ch; color: #cfcfd6; }
 .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; align-items: center; }
 .eyebrow {
   display: inline-block; font-size: .78rem; font-weight: 700; letter-spacing: .12em;
-  text-transform: uppercase; color: #ffb37a; margin-bottom: 14px;
+  text-transform: uppercase; color: #ff9d9d; margin-bottom: 14px;
 }
 .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; }
 
@@ -175,8 +178,8 @@ img { max-width: 100%; height: auto; display: block; }
   list-style: none; margin: 34px 0 0; padding: 22px 0 0; display: grid; gap: 12px;
   border-top: 1px solid rgba(255,255,255,.15);
 }
-.trust li { display: flex; gap: 10px; align-items: flex-start; font-size: .95rem; color: #cfe0ee; }
-.trust svg { flex: 0 0 auto; margin-top: 3px; color: #6fd48f; }
+.trust li { display: flex; gap: 10px; align-items: flex-start; font-size: .95rem; color: #d6d6dc; }
+.trust svg { flex: 0 0 auto; margin-top: 3px; color: #7ed69a; }
 
 .hero-card {
   background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.16);
@@ -184,7 +187,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .hero-card h2 { color: #fff; font-size: 1.15rem; margin-bottom: 14px; }
 .hero-card dl { margin: 0; display: grid; gap: 14px; }
-.hero-card dt { font-size: .76rem; text-transform: uppercase; letter-spacing: .1em; color: #9dbdd8; }
+.hero-card dt { font-size: .76rem; text-transform: uppercase; letter-spacing: .1em; color: #a2a2ab; }
 .hero-card dd { margin: 2px 0 0; color: #fff; font-weight: 600; }
 .hero-card dd a { color: #fff; text-decoration: none; }
 .hero-card dd a:hover { text-decoration: underline; }
@@ -219,7 +222,7 @@ section.alt { background: var(--bg-alt); }
 .card .more::after { content: " →"; }
 .icon {
   width: 42px; height: 42px; border-radius: 9px; display: grid; place-items: center;
-  background: rgba(226,104,15,.12); color: var(--flame); margin-bottom: 16px;
+  background: rgba(224,43,43,.1); color: var(--flame); margin-bottom: 16px;
 }
 
 .ticks { list-style: none; margin: 0; padding: 0; display: grid; gap: 11px; }
@@ -276,10 +279,10 @@ details.faq .faq-body { padding: 0 22px 20px; font-size: .97rem; }
 /* ---------- CTA band ---------- */
 
 .cta-band {
-  background: var(--navy); color: #dbe8f3; text-align: center; padding: 62px 0;
+  background: var(--navy); color: #dedee3; text-align: center; padding: 62px 0;
 }
 .cta-band h2 { color: #fff; }
-.cta-band p { max-width: 52ch; margin-inline: auto; color: #b9d0e3; }
+.cta-band p { max-width: 52ch; margin-inline: auto; color: #bcbcc4; }
 .cta-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 26px; }
 
 /* ---------- Forms ---------- */
@@ -304,15 +307,15 @@ details.faq .faq-body { padding: 0 22px 20px; font-size: .97rem; }
 
 /* ---------- Footer ---------- */
 
-.site-footer { background: var(--navy); color: #a8c3d8; padding: 54px 0 26px; font-size: .93rem; }
+.site-footer { background: var(--navy); color: #ababb4; padding: 54px 0 26px; font-size: .93rem; }
 .site-footer h4 { color: #fff; font-size: .82rem; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 14px; }
-.site-footer a { color: #dceaf5; text-decoration: none; }
+.site-footer a { color: #e0e0e6; text-decoration: none; }
 .site-footer a:hover { text-decoration: underline; }
 .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 36px; }
 .site-footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 9px; }
 .footer-bottom {
   margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.13);
-  display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: .86rem; color: #8fadc6;
+  display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: .86rem; color: #8f8f99;
 }
 @media (max-width: 860px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 520px) { .footer-grid { grid-template-columns: 1fr; } }
@@ -346,7 +349,7 @@ details.faq .faq-body { padding: 0 22px 20px; font-size: .97rem; }
   stroke: var(--navy-600); stroke-width: 3; fill: none;
   stroke-linecap: round; stroke-linejoin: round; opacity: .5;
 }
-@media (prefers-color-scheme: dark) { .ghost svg { stroke: #7fb4e8; } }
+@media (prefers-color-scheme: dark) { .ghost svg { stroke: #9a9aa4; } }
 .ghost-van svg { stroke-width: 2.5; }
 .ghost-van .fill { fill: currentColor; color: var(--ink); opacity: .9; stroke: none; }
 .ghost-van .cut { fill: var(--bg); stroke: none; }
