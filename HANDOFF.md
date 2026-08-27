@@ -60,11 +60,9 @@ reviews yet, and (by Gavin's choice) no phone number.
 
 ## Logos — read before adding any
 
-- **Gas Safe logo:** Gavin is registered (962889) so he's entitled to display
-  it, but the artwork must come from the Gas Safe Register engineer portal
-  (Rules for Registered Businesses govern usage). Download it there, drop it
-  in `assets/img/`, and add it beside the register number in the footer and
-  hero card. **Do not redraw or generate it** — it's a certification mark.
+- **Gas Safe logo:** DONE — Gavin supplied his own numbered badge artwork
+  (962889); it's live on the hero card and About page as
+  `assets/img/gas-safe-962889.svg`. Never redraw or recolour it.
 - **Baxi:** only add the Baxi (or Baxi Approved Installer) logo if Gavin is
   actually on their installer scheme, using artwork Baxi supplies. The drum's
   boiler drawing is deliberately unbranded; the caption says "incl. Baxi"
@@ -93,8 +91,12 @@ reviews yet, and (by Gavin's choice) no phone number.
   website itself. Needs the address decision above settled first.
 - **Real reviews.** Deliberately none on the site — inventing them is out.
   Once you've a few Google reviews, they can be quoted with attribution.
-- **Logo.** The header currently uses a simple "GR" block. A proper logo drops
-  straight into `.brand .mark` in the header of each page.
+- **Upload the PNG pack.** Gavin's real logo and numbered Gas Safe badge are
+  live (SVG-wrapped — see CLAUDE.md). Two raster files still need uploading
+  via github.com → repo → `assets/img` → *Add file → Upload files*:
+  `og-image.png` (social share previews reference it) and optionally
+  `logo.png` (referenced by the JSON-LD `logo` field). Claude has the files
+  ready to send whenever.
 
 ---
 
@@ -107,6 +109,9 @@ reviews yet, and (by Gavin's choice) no phone number.
 - Enquiry form with honeypot and a fail-safe guard until the key is set
 - Copy checked against `GR-Energy-Scotland/CLAUDE.md`: no VAT references,
   no England-only Building Regs wording, no invented credentials or reviews
+- Real logo in the header site-wide, molecule favicon, numbered Gas Safe
+  badge on the hero card and About page; site rethemed to the logo's
+  black/grey/red palette (2026-08-27)
 
 ---
 
@@ -127,3 +132,6 @@ reviews yet, and (by Gavin's choice) no phone number.
   `figure` or the captions wash out. Reduced-motion users get a static row.
 - **VAT and the phone number were deliberately removed** on 2026-08-27 —
   don't "restore" them from an old commit.
+- **Base64 assets are fragile to hand-edit** — a single wrong character
+  corrupts the image. If an asset needs changing, regenerate it from the
+  source PNG rather than editing the SVG wrapper, and byte-verify after push.

@@ -103,6 +103,20 @@ redefines the tokens — **never hard-code a colour in a page**, use the variabl
 | `--ink` / `--body` / `--muted` | Text hierarchy |
 | `--bg` / `--bg-alt` / `--card` | Surfaces |
 
+The palette comes from **Gavin's actual logo** (2026-08-27): near-black
+`#16161a`, greys, and logo red `#e02b2b`. Don't reintroduce the old
+navy/orange scheme.
+
+### Brand assets
+
+`assets/img/logo.svg`, `gas-safe-962889.svg` and `favicon.svg` are **PNG
+artwork wrapped in SVG containers** (line-wrapped base64) because this
+session's GitHub push path only carries text. Browsers render them normally.
+The real PNGs (incl. `og-image.png`, which social scrapers need as raster)
+are with Gavin to upload via the GitHub web UI — see HANDOFF. The Gas Safe
+badge is Gavin's own numbered artwork (962889); never redraw or recolour it.
+In dark mode the header logo sits on a white chip (`.brand img`).
+
 ## The enquiry form
 
 `contact.html` posts to **Web3Forms** (`api.web3forms.com/submit`). GitHub Pages
