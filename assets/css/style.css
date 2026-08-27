@@ -330,3 +330,30 @@ details.faq .faq-body { padding: 0 22px 20px; font-size: .97rem; }
 .prose h3 { margin-top: 1.6em; }
 .prose ul { padding-left: 1.15em; }
 .prose li { margin-bottom: .5em; }
+
+/* ---------- Ghost drum (home) ---------- */
+
+.ghost-band { overflow: hidden; padding-bottom: 56px; }
+.drum-viewport { perspective: 1100px; perspective-origin: 50% 50%; }
+.drum {
+  display: flex; gap: clamp(28px, 5vw, 64px); align-items: flex-end;
+  padding: 10px 8vw 0; width: max-content;
+  transform-style: preserve-3d; will-change: transform;
+}
+.ghost { margin: 0; text-align: center; flex: 0 0 auto; transform-style: preserve-3d; }
+.ghost svg {
+  width: clamp(130px, 16vw, 190px); height: auto; display: block; margin-inline: auto;
+  stroke: var(--navy-600); stroke-width: 3; fill: none;
+  stroke-linecap: round; stroke-linejoin: round; opacity: .5;
+}
+@media (prefers-color-scheme: dark) { .ghost svg { stroke: #7fb4e8; } }
+.ghost-van svg { stroke-width: 2.5; }
+.ghost-van .fill { fill: currentColor; color: var(--ink); opacity: .9; stroke: none; }
+.ghost-van .cut { fill: var(--bg); stroke: none; }
+.ghost figcaption { margin-top: 12px; font-weight: 700; color: var(--ink); font-size: .92rem; }
+.ghost figcaption span { display: block; font-weight: 400; color: var(--muted); font-size: .8rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  .drum { transform: none !important; width: auto; flex-wrap: wrap; justify-content: center; padding-inline: 20px; }
+  .ghost { transform: none !important; }
+}
