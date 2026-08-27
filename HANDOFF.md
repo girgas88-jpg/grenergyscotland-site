@@ -1,7 +1,9 @@
 # HANDOFF — grenergyscotland.co.uk
 
-**Updated:** 2026-08-27
-**Status:** Site built and pushed. **Not yet live** — Pages and DNS still to do.
+**Updated:** 2026-08-27 (evening)
+**Status:** Site v2 pushed — VAT wording removed, phone number removed
+(email + form only), ghost drum added to the home page. Repo is public.
+**Not yet live** — Pages and DNS still to do.
 
 ---
 
@@ -40,10 +42,33 @@ account needed, the key arrives by email. Then in `contact.html`:
 ```
 
 Replace that value, push, and **send yourself a test enquiry**. Until it's
-replaced, `main.js` blocks submission and tells the visitor to phone instead —
+replaced, `main.js` blocks submission and tells the visitor to email instead —
 so the form fails safe rather than silently binning leads.
 
 ---
+
+## Competitor check (2026-08-27)
+
+Looked at local rivals: JDS Gas Services (Kirkintilloch), Absolute Gas
+Services / glasgowgasengineer.co.uk, plus the Able Group and TrustATrader
+listings. Pattern: all phone-first, Gas Safe number prominent; the stronger
+ones (JDS) show **manufacturer accreditation logos — Worcester, Ideal,
+Vaillant, Baxi** — and package pricing; several have Rated People / review
+counts. Weaknesses across the board: dated, text-heavy design, and half have
+no reviews. Our gaps against them: no manufacturer accreditation badges, no
+reviews yet, and (by Gavin's choice) no phone number.
+
+## Logos — read before adding any
+
+- **Gas Safe logo:** Gavin is registered (962889) so he's entitled to display
+  it, but the artwork must come from the Gas Safe Register engineer portal
+  (Rules for Registered Businesses govern usage). Download it there, drop it
+  in `assets/img/`, and add it beside the register number in the footer and
+  hero card. **Do not redraw or generate it** — it's a certification mark.
+- **Baxi:** only add the Baxi (or Baxi Approved Installer) logo if Gavin is
+  actually on their installer scheme, using artwork Baxi supplies. The drum's
+  boiler drawing is deliberately unbranded; the caption says "incl. Baxi"
+  which is a statement of what he works on, not an accreditation claim.
 
 ## 🟠 Decisions Gavin needs to make
 
@@ -53,6 +78,7 @@ so the form fails safe rather than silently binning leads.
 | **MCS certification** — not claimed anywhere on the site, because it wasn't in the business repo. Grant-funded heat pump work generally requires it. If you hold it, say so on `heat-pumps.html`; it's a strong differentiator. | `heat-pumps.html` |
 | **Public liability insurance** — not mentioned. Customers ask. If you're covered, worth a line on `about.html` with the cover amount. | `about.html` |
 | **Emergency / out-of-hours** — the site deliberately promises no response time. Your pricing basis has an out-of-hours rate, so if you want that work, it needs saying somewhere. | `services.html`, `contact.html` |
+| **No phone number** — removed at your request. Both local competitors are phone-first because breakdown customers phone. Reconsider a forwarding/virtual number if enquiry volume disappoints. | site-wide |
 | **Areas list** — I built it from a sensible radius around Torrance. Check it: anything on there you won't travel to, and anything missing you would. | `areas.html` |
 
 ---
@@ -96,3 +122,8 @@ so the form fails safe rather than silently binning leads.
   custom domain and the site 404s on the real URL.
 - **`.nojekyll` matters** — without it GitHub runs Jekyll over the repo and can
   swallow files beginning with an underscore.
+- **Ghost drum:** `#kit` section on `index.html` + JS at the bottom of
+  `main.js`. The drum fades the `svg` only — don't move the opacity onto the
+  `figure` or the captions wash out. Reduced-motion users get a static row.
+- **VAT and the phone number were deliberately removed** on 2026-08-27 —
+  don't "restore" them from an old commit.

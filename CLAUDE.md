@@ -15,11 +15,17 @@ Read `HANDOFF.md` for current state and next actions.
 
 ### 1. VAT
 
-Gavin is a **sole trader and not VAT registered**. The site says so, because it
-is a genuine advantage over larger firms. **Never add a VAT number, a VAT
-breakdown, or "prices exclude VAT" anywhere.** If he registers later, this has
-to be corrected on every page that mentions it (`index.html`, `about.html`,
-`gas-boilers.html`, `unvented-cylinders.html`).
+Gavin is a **sole trader and not VAT registered**, but as of 2026-08-27 he asked
+for **all VAT mentions to be removed from the site** — no "no VAT added"
+selling point, no VAT FAQ. Don't reintroduce them. The underlying rule stands:
+**never add a VAT number, a VAT breakdown, or "prices exclude VAT" anywhere.**
+
+### 1b. Contact channels
+
+As of 2026-08-27 the site carries **no phone number** — enquiries are by the
+contact form and email only, at Gavin's request. Don't re-add a tel: link
+without asking him. The **National Gas Emergency Service number (0800 111 999)
+stays** — that's a safety line, not a contact channel.
 
 ### 2. Scotland, not England
 
@@ -38,7 +44,6 @@ The site currently claims **only** what is verifiable:
 - Gas Safe register number **962889**
 - G3 qualified for unvented hot water storage
 - Works on air source heat pumps
-- Sole trader, not VAT registered
 - Based in Torrance, covers Glasgow and East Dunbartonshire
 
 **Not claimed, because unconfirmed:** MCS certification, OFTEC, years of
@@ -73,6 +78,17 @@ and `</nav>`; the footer between `<footer class="site-footer">` and `</footer>`.
 
 `404.html` is the exception: its links are **root-relative** (`/index.html`)
 because GitHub Pages serves it from arbitrary URL paths. Keep it that way.
+
+### The ghost drum (home page)
+
+`index.html` has a `#kit` section — a horizontal band of ghosted inline-SVG
+line art (boiler, pipework, heat pump, radiator, cylinder, black T7 van) that
+translates and rotates like a cylinder as the visitor scrolls. Driven by the
+"Ghost drum" block at the bottom of `assets/js/main.js`; styles under
+"Ghost drum" in the stylesheet. It respects `prefers-reduced-motion`
+(falls back to a static wrapped row) and fades only the `svg`, never the
+captions. The art is deliberately unbranded — see HANDOFF for the Gas Safe
+and Baxi logo situation before adding any trademark.
 
 ## Styling
 
