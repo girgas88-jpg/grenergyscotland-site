@@ -39,7 +39,8 @@ Web3Forms delivery address too.
 | **Business email** `@grenergyscotland.co.uk` | Options laid out in the business repo HANDOFF. When chosen: replace `grenergyscotland@gmail.com` site-wide (topbar, footer, hero card, CTA, contact, privacy, JSON-LD) and in Web3Forms. Re-check Namecheap Mail Settings — switching from Email Forwarding changes MX records. |
 | **Virtual phone number** | Gavin wants one. When it exists, add it back (topbar, contact, JSON-LD `telephone`). Until then: no tel: links (content rule 1b). |
 | **Virtual business address** | Gavin wants one. Site now says "Glasgow" only. A virtual address could go in JSON-LD `PostalAddress` and a Google Business Profile — never the home address. |
-| **Photos — still needed** | Live: boiler (×3), radiator, cylinder. Gavin's plan is a real photo on every home-page service card. Still needed: **cooker/hob**, **HP60 heat pump**, and a **landlord certificate** example (blank or fully redacted — no tenant/address). Cards without a photo keep their icon. |
+| **Photos — still needed** | Every home-page card has a photo except **Air source heat pumps** — needs Gavin's own HP60 install photo. The Cookers card uses a **stock photo** for now (see Done) — swap it for his own hob/fire install when he has one. Cards without a photo keep their icon. |
+| **Images Gavin found online — not usable** | 17 Oct he offered five from Downloads: Megaflo and Baxi product shots (manufacturers' copyright; the Baxi one also advertises a "10 year warranty" the site doesn't offer), a Calleos gas-fire product shot, a numbered stock-library hob photo (needs a paid licence), and an AI-generated "CP12" with gibberish text and the Gas Safe logo. All declined. Rule: real work, or a properly licensed generic image that doesn't pose as his job. |
 | **360° spin** | Gavin asked for one. Needs 24–36 stills shot all the way round one object (or a short video) — can't be made from ordinary photos. The swipeable "Recent work" strip covers the gallery part. |
 | **MCS** | Gavin doesn't hold MCS himself; the partner does. Don't claim it. |
 | **Areas list** | Still Claude's sensible radius around Torrance — Gavin to check. |
@@ -88,6 +89,16 @@ Web3Forms delivery address too.
   Gavin's Samsung Object-eraser edit `20260725_141846(1).jpg` — installation
   unchanged, wall lightened; crop also removes Samsung's "AI-generated
   content" stamp (Gavin informed).
+- **17 Oct 2026 — last three cards.** Gas boilers card swapped to the Baxi
+  400 kitchen install (`boiler-4`) at Gavin's request. **Landlords card:**
+  `landlord-cp12.jpg` is a render of GasAssistIQ's own LGSR template filled
+  with dummy details ("Example Tenant", cert no. EXAMPLE) — his real
+  paperwork layout, no Gas Safe logo, no customer data. **Cookers card:**
+  `hob-stock.jpg` is **Pexels photo 13422435** (Pexels licence: free
+  commercial use, no attribution required) — chosen for an even blue flame;
+  two candidates were rejected for yellow/orange flames, which read as poor
+  combustion to anyone in the trade. Neither is in the Recent work strip —
+  that stays real jobs only.
 - **17 Oct 2026 — mobile check.** Every page loaded in frames at 320, 360,
   375, 393 px portrait and 800/852 px landscape. Only fault: `contact.html`
   scrolled sideways (+13 to +46 px) because the unbreakable email address
