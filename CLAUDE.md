@@ -160,7 +160,7 @@ In dark mode the header logo sits on a white chip (`.brand img`).
 is static and cannot process a form itself, which is why a third party is
 involved at all.
 
-- The `access_key` hidden input must hold the real key from web3forms.com.
+- The `access_key` hidden input holds the key for the "GR Energy website enquiries" form (account grenergyscotland@gmail.com, connected 17 Oct 2026).
   Until it does, `main.js` intercepts submit and shows a fallback message.
   **Web3Forms now needs an account** (app.web3forms.com, as of 2026-10-17) —
   the old "email in, key out, no account" flow is gone. Gavin signs up himself;

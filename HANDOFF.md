@@ -5,7 +5,8 @@
 GitHub Pages on (`main` / root), Namecheap DNS pointed at GitHub, Let's
 Encrypt certificate for `www.grenergyscotland.co.uk` (auto-renewed by GitHub),
 Enforce HTTPS on; `http://` and the bare domain both 301 to `https://www`.
-The **enquiry form is not connected** yet.
+The **enquiry form is connected** (Web3Forms, 17 Oct 2026). **Nothing is
+blocking** — the site is fully working.
 
 ---
 
@@ -21,16 +22,17 @@ recreates `CNAME` as two GitHub commits (`Delete CNAME`, `Create CNAME`) —
 pull afterwards. Claude Code's safety check blocks that click as a
 DNS/cert change until Gavin says go in the chat.
 
-### 2. Connect the enquiry form (Web3Forms)
+### 2. ~~Connect the enquiry form~~ — DONE 17 Oct 2026
 
-Web3Forms now needs an account. Gavin: sign up at app.web3forms.com with
-`grenergyscotland@gmail.com` (email link, not "Continue with Google" unless
-that Gmail is the signed-in Google account), create a form, paste the Access
-Key to Claude. Then in `contact.html` replace
-`REPLACE_WITH_WEB3FORMS_ACCESS_KEY`, update the stale "no account required"
-HTML comment above it, push, and send one test enquiry through the live form.
-If the business email moves to `@grenergyscotland.co.uk`, update the
-Web3Forms delivery address too.
+Web3Forms account **grenergyscotland@gmail.com**, free plan (250/month,
+resets on the 1st), form **"GR Energy website enquiries"**, access key in
+`contact.html` (public by design). One test enquiry sent through the live
+form (name "TEST - website setup", dummy phone/postcode): redirected to
+`thanks.html` and logged on the dashboard (1 submission, 0 spam). Gavin to
+confirm it reached the grenergyscotland inbox and delete it.
+**Gotcha:** Chrome was signed in to Web3Forms as `gavin.ian.ritchie@` — check
+which account owns the form before changing settings. If the business email
+moves to `@grenergyscotland.co.uk`, change the delivery address in Web3Forms.
 
 ---
 
