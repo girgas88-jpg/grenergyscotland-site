@@ -46,7 +46,8 @@ moves to `@grenergyscotland.co.uk`, change the delivery address in Web3Forms.
 | **Virtual phone number** | Gavin wants one. When it exists, add it back (topbar, contact, JSON-LD `telephone`). Until then: no tel: links (content rule 1b). |
 | **Virtual business address** | Gavin wants one. Site now says "Glasgow" only. A virtual address could go in JSON-LD `PostalAddress` and a Google Business Profile — never the home address. |
 | **Photos — still needed** | Every home-page card has a photo except **Air source heat pumps** — needs Gavin's own HP60 install photo. The Cookers card uses a **stock photo** for now (see Done) — swap it for his own hob/fire install when he has one. Cards without a photo keep their icon. |
-| **"House Pro" login prompt** | Gavin (17 Oct): tapping the home-page service cards on his phone asks for a "House Pro" login. **Not reproducible from outside** — every card link returns 200 with no redirect on www and bare domain, and the site has no login anywhere. So it is the phone or the network (home router DNS filter? a browser extension or app link capture?). Next: a screenshot of the prompt showing the address bar, and the same tap on mobile data with Wi-Fi off. |
+| **Job stories** | Gavin wants a short story under each Recent work photo. **Waiting on him** (or Ash) for a line or two per job - what was there, what was done, town only. Do not invent: the jobs repo has no record of these installs. Current captions are factual descriptions of the photos only. More cylinder befores may still be syncing to Drive. |
+| ~~"House Pro" login prompt~~ | **Solved 17 Oct:** it is the **Houzz Pro** Chrome extension on Gavin's own browser (image clipper - pops up when an image is clicked on any site). Not the website; visitors without the extension never see it. |
 | **Images Gavin found online — not usable** | 17 Oct he offered five from Downloads: Megaflo and Baxi product shots (manufacturers' copyright; the Baxi one also advertises a "10 year warranty" the site doesn't offer), a Calleos gas-fire product shot, a numbered stock-library hob photo (needs a paid licence), and an AI-generated "CP12" with gibberish text and the Gas Safe logo. All declined. Rule: real work, or a properly licensed generic image that doesn't pose as his job. |
 | **360° spin** | Gavin asked for one. Needs 24–36 stills shot all the way round one object (or a short video) — can't be made from ordinary photos. The swipeable "Recent work" strip covers the gallery part. |
 | **MCS** | Gavin doesn't hold MCS himself; the partner does. Don't claim it. |
@@ -96,6 +97,7 @@ moves to `@grenergyscotland.co.uk`, change the delivery address in Web3Forms.
   Gavin's Samsung Object-eraser edit `20260725_141846(1).jpg` — installation
   unchanged, wall lightened; crop also removes Samsung's "AI-generated
   content" stamp (Gavin informed).
+- **17 Oct 2026, late — before/after slider.** Recent work opens with a drag-to-compare slider for the Megaflo job (`#ba-cyl`, `.ba` in the stylesheet, script at the end of `main.js`): `cylinder-1-before.jpg` is Gavin's photo of the old foam-lagged cylinder, cropped to drop a coat on a hook and the door. A range input sits over two stacked images, so mouse, touch and keyboard all work and a click never lands on an image (which also stops image-clipper extensions firing).
 - **17 Oct 2026, late — kitchen 400 cleaned up.** `boiler-4.jpg` replaced
   with Gavin's Grok-edited version of the same install
   (`grok_1792272340249(1).jpg` in Drive): stripped walls repainted, stickers
