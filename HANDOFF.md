@@ -1,22 +1,25 @@
 # HANDOFF — grenergyscotland.co.uk
 
 **Updated:** 2026-10-17
-**Status:** **LIVE** at http://www.grenergyscotland.co.uk — GitHub Pages on
-(`main` / root), Namecheap DNS pointed at GitHub, bare domain redirects to
-`www`. Site v3 copy pushed: stripped back per Gavin's 17 Oct voice notes.
-**HTTPS pending** (certificate not yet issued at time of writing) and the
-**enquiry form is not connected** yet.
+**Status:** **LIVE over HTTPS** at https://www.grenergyscotland.co.uk —
+GitHub Pages on (`main` / root), Namecheap DNS pointed at GitHub, Let's
+Encrypt certificate for `www.grenergyscotland.co.uk` (auto-renewed by GitHub),
+Enforce HTTPS on; `http://` and the bare domain both 301 to `https://www`.
+The **enquiry form is not connected** yet.
 
 ---
 
 ## 🔴 Still blocking
 
-### 1. Enforce HTTPS
+### 1. ~~Enforce HTTPS~~ — DONE 17 Oct 2026
 
-Once GitHub issues the certificate (Settings → Pages stops saying "DNS Check
-in Progress"), tick **Enforce HTTPS**. Verify from outside:
-`curl -sI https://www.grenergyscotland.co.uk` → 200, and
-`http://` → 301 to `https://`.
+GitHub's DNS check sat on "in progress" for over two hours with DNS correct
+(4 A records, www CNAME, no CAA). **Fix: Settings → Pages → custom domain →
+Remove, then type it back in and Save.** The certificate was served within a
+minute and GitHub ticked Enforce HTTPS itself. Remove/Save also deletes and
+recreates `CNAME` as two GitHub commits (`Delete CNAME`, `Create CNAME`) —
+pull afterwards. Claude Code's safety check blocks that click as a
+DNS/cert change until Gavin says go in the chat.
 
 ### 2. Connect the enquiry form (Web3Forms)
 

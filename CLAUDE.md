@@ -3,7 +3,7 @@
 Static marketing website for **GR Energy Scotland**, Gavin's heating and gas
 engineering business in Glasgow. Plain HTML/CSS/JS on GitHub Pages.
 
-**Live:** https://www.grenergyscotland.co.uk
+**Live:** https://www.grenergyscotland.co.uk (HTTPS since 17 Oct 2026)
 **Repo:** `girgas88-jpg/grenergyscotland-site` (public — GitHub Pages needs it)
 **Business repo:** `girgas88-jpg/GR-Energy-Scotland` (quotes, estimates, pricing)
 
