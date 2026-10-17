@@ -39,7 +39,8 @@ Web3Forms delivery address too.
 | **Business email** `@grenergyscotland.co.uk` | Options laid out in the business repo HANDOFF. When chosen: replace `grenergyscotland@gmail.com` site-wide (topbar, footer, hero card, CTA, contact, privacy, JSON-LD) and in Web3Forms. Re-check Namecheap Mail Settings — switching from Email Forwarding changes MX records. |
 | **Virtual phone number** | Gavin wants one. When it exists, add it back (topbar, contact, JSON-LD `telephone`). Until then: no tel: links (content rule 1b). |
 | **Virtual business address** | Gavin wants one. Site now says "Glasgow" only. A virtual address could go in JSON-LD `PostalAddress` and a Google Business Profile — never the home address. |
-| **Photos** | Gavin wants real job photos throughout (installs, boilers, radiators, before/after). Needs him to send them — landscape, good light, no customer house numbers or faces. |
+| **Photos — still needed** | Live: boiler (×3) and radiator. Gavin's plan is a real photo on every home-page service card. Still needed: **cylinder** (the Megaflo shot `20260725_141846.jpg` is held — mouldy cupboard wall; Gavin to clean it with phone Object eraser and re-drop it in Drive root), **cooker/hob**, **HP60 heat pump**, and a **landlord certificate** example (blank or fully redacted — no tenant/address). Cards without a photo keep their icon. |
+| **360° spin** | Gavin asked for one. Needs 24–36 stills shot all the way round one object (or a short video) — can't be made from ordinary photos. The swipeable "Recent work" strip covers the gallery part. |
 | **MCS** | Gavin doesn't hold MCS himself; the partner does. Don't claim it. |
 | **Areas list** | Still Claude's sensible radius around Torrance — Gavin to check. |
 
@@ -75,6 +76,14 @@ Web3Forms delivery address too.
   removed; contact form gains a cooker/hob/fire option and its postcode
   placeholder is no longer Gavin's real postcode; address site-wide is
   "Glasgow".
+- **17 Oct 2026 — first real photos.** `assets/img/work/` (boiler-1, -3,
+  -4, radiator-1) from five photos Gavin dropped in the root of his
+  gavin.ian.ritchie Google Drive. Cropped to remove a warranty serial number,
+  tools/clutter and a street view; resized to 720 px; re-encoded with no
+  EXIF. Photo on the Gas boilers and Radiators cards (`.card-photo`), plus a
+  swipeable **Recent work** strip (`#work`, CSS scroll-snap + small arrow
+  script at the end of `main.js`, no library). Baxi branding in the boiler
+  photos accepted by Gavin before the contract check.
 - Earlier: nine pages + `thanks.html` + `404.html`; responsive, dark mode;
   LocalBusiness + FAQPage JSON-LD, sitemap, robots; logo palette; numbered
   Gas Safe badge (kept on About and hero — Gavin confirmed 17 Oct).
@@ -105,5 +114,15 @@ number now planned).
 - **VAT and the phone number were deliberately removed** — don't restore
   from old commits (a *virtual* number is a new decision, see above).
 - **Base64 assets are fragile to hand-edit.**
+- **Photos:** originals live in Gavin's Drive (`C:\Users\girga\My Drive
+  (gavin.ian.ritchie@gmail.com)` on the rig — the Drive connector can't
+  auth). Never commit originals: crop, resize to 720 px and re-encode (drops
+  EXIF/GPS); check for serial numbers, house numbers, street views, faces.
+- **AI photo clean-up (ElevenLabs):** the image-edit node defaults to
+  **16:9, 1K** — on a portrait photo the model redraws the installation to
+  fill the frame (invented pipework). Set 9:16 / portrait before running.
+  Cost ~1,800 credits per variation, 4 variations per run. First attempt
+  17 Oct wasted ~22k credits this way; nothing from it was used. Only ever
+  clean backgrounds, never the installation, and compare against the original.
 - **Line endings:** working copies are a CRLF/LF mix (`text=auto`). Scripted
   edits must handle both; `sed -i` in Git Bash strips CRs. Commits normalise.

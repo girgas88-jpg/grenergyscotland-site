@@ -224,6 +224,30 @@ section.alt { background: var(--bg-alt); }
   width: 42px; height: 42px; border-radius: 9px; display: grid; place-items: center;
   background: rgba(224,43,43,.1); color: var(--flame); margin-bottom: 16px;
 }
+/* Real job photo in place of the icon (home page service cards) */
+.card-photo {
+  display: block; width: calc(100% + 52px); max-width: none; height: auto; margin: -26px -26px 18px;
+  aspect-ratio: 4 / 3; object-fit: cover; object-position: center 35%;
+  border-radius: var(--radius) var(--radius) 0 0; border-bottom: 1px solid var(--line);
+}
+
+/* Recent work: swipeable photo strip, no library */
+.work-strip {
+  display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory;
+  padding: 4px 2px 14px; -webkit-overflow-scrolling: touch; scrollbar-width: thin;
+}
+.work-strip figure { flex: 0 0 auto; width: min(280px, 72vw); margin: 0; scroll-snap-align: start; }
+.work-strip img {
+  display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover;
+  border-radius: var(--radius); border: 1px solid var(--line); box-shadow: var(--shadow);
+}
+.work-strip figcaption { margin-top: 8px; font-size: .9rem; color: var(--muted); }
+.work-nav { display: flex; gap: 10px; margin-top: 8px; }
+.work-nav button {
+  width: 42px; height: 42px; border-radius: 999px; border: 1px solid var(--line);
+  background: var(--card); color: var(--ink); font-size: 1.2rem; cursor: pointer;
+}
+.work-nav button:hover { border-color: var(--flame); color: var(--flame); }
 
 .ticks { list-style: none; margin: 0; padding: 0; display: grid; gap: 11px; }
 .ticks li { display: flex; gap: 11px; align-items: flex-start; }

@@ -86,3 +86,17 @@
   window.addEventListener('resize', onScroll);
   layout();
 })();
+
+/* Recent work strip: arrow buttons scroll one photo at a time */
+(function () {
+  var strip = document.getElementById('work-strip');
+  if (!strip) return;
+  var nav = strip.parentNode.querySelectorAll('.work-nav button');
+  for (var i = 0; i < nav.length; i++) {
+    nav[i].addEventListener('click', function () {
+      var fig = strip.querySelector('figure');
+      var step = fig ? fig.getBoundingClientRect().width + 16 : 300;
+      strip.scrollBy({ left: step * Number(this.getAttribute('data-dir')), behavior: 'smooth' });
+    });
+  }
+})();
