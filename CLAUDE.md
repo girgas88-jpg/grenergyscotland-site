@@ -116,22 +116,29 @@ and `</nav>`; the footer between `<footer class="site-footer">` and `</footer>`.
 `404.html` is the exception: its links are **root-relative** (`/index.html`)
 because GitHub Pages serves it from arbitrary URL paths. Keep it that way.
 
-### The ghost drum (home page)
+### Home page sections
 
-`index.html` has a `#kit` section — a horizontal band of ghosted inline-SVG
-line art (boiler, pipework, heat pump, radiator, cylinder, black T7 van) that
-translates and rotates like a cylinder as the visitor scrolls. Driven by the
-"Ghost drum" block at the bottom of `assets/js/main.js`; styles under
-"Ghost drum" in the stylesheet. It respects `prefers-reduced-motion`
-(falls back to a static wrapped row) and fades only the `svg`, never the
-captions. The art is deliberately unbranded — see HANDOFF for the Gas Safe
-and Baxi logo situation before adding any trademark.
+Hero → What I do (six cards, real photos where Gavin has them) → **Recent
+work** (`#work`: before/after slider + swipeable strip with a short job story
+under each photo) → Where I work → FAQ → CTA. The "kit I work with" ghost-drum
+section was **removed 17 Oct 2026** at Gavin's request (Recent work shows the
+same thing with real jobs) — its HTML, JS and CSS are all gone; don't restore it.
+
+Job stories come from Gavin (usually via Ash), rewritten to read
+professionally. **Never invent job details** and never add "customer very
+happy" lines — that is unattributed social proof (content rule 3).
 
 ## Styling
 
 One stylesheet, `assets/css/style.css`, driven by CSS custom properties on
-`:root`. Dark mode is handled by a single `prefers-color-scheme` block that
-redefines the tokens — **never hard-code a colour in a page**, use the variable.
+`:root` — **never hard-code a colour in a page**, use the variable.
+
+**Light only (17 Oct 2026, Gavin: the dark mode was "dull and gloomy").**
+There is no `prefers-color-scheme: dark` rule anywhere, `:root` sets
+`color-scheme: light`, and every page carries
+`<meta name="color-scheme" content="light only">` so Chrome's auto-dark and
+Samsung Internet's dark mode leave it alone. Don't add a dark theme back
+without asking.
 
 | Token | Use |
 |---|---|
@@ -152,7 +159,6 @@ session's GitHub push path only carries text. Browsers render them normally.
 The real PNGs (incl. `og-image.png`, which social scrapers need as raster)
 are with Gavin to upload via the GitHub web UI — see HANDOFF. The Gas Safe
 badge is Gavin's own numbered artwork (962889); never redraw or recolour it.
-In dark mode the header logo sits on a white chip (`.brand img`).
 
 ## The enquiry form
 

@@ -97,6 +97,7 @@ moves to `@grenergyscotland.co.uk`, change the delivery address in Web3Forms.
   Gavin's Samsung Object-eraser edit `20260725_141846(1).jpg` — installation
   unchanged, wall lightened; crop also removes Samsung's "AI-generated
   content" stamp (Gavin informed).
+- **17 Oct 2026, late — light only, drum gone, stories refined.** At Gavin's request: the "kit I work with" ghost-drum section removed (HTML/JS/CSS); dark mode removed - the site is light for everyone (dark mode was "dull and gloomy"); kitchen and radiator stories rewritten from his follow-up notes. Fixed on the way: the header "Get a quote" button had dark text on red for every light-mode visitor (`.nav a` colour beat `.btn-primary`).
 - **17 Oct 2026, late — before/after slider.** Recent work opens with a drag-to-compare slider for the Megaflo job (`#ba-cyl`, `.ba` in the stylesheet, script at the end of `main.js`): `cylinder-1-before.jpg` is Gavin's photo of the old foam-lagged cylinder, cropped to drop a coat on a hook and the door. A range input sits over two stacked images, so mouse, touch and keyboard all work and a click never lands on an image (which also stops image-clipper extensions firing).
 - **17 Oct 2026, late — kitchen 400 cleaned up.** `boiler-4.jpg` replaced
   with Gavin's Grok-edited version of the same install
@@ -150,7 +151,6 @@ number now planned).
   nothing on 17 Oct; rerun it after FAQ edits.
 - **Don't delete `CNAME`.**
 - **`.nojekyll` matters.**
-- **Ghost drum:** fades the `svg` only, not the `figure`.
 - **VAT and the phone number were deliberately removed** — don't restore
   from old commits (a *virtual* number is a new decision, see above).
 - **Base64 assets are fragile to hand-edit.**
