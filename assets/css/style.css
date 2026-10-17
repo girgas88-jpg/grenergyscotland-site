@@ -221,7 +221,7 @@ section.alt { background: var(--bg-alt); }
    top drives it, so it works by mouse, touch and keyboard with no library. */
 .ba-feature { display: grid; grid-template-columns: minmax(0, 320px) minmax(0, 1fr); gap: 32px; align-items: center; margin-bottom: 40px; }
 @media (max-width: 640px) { .ba-feature { grid-template-columns: 1fr; } .ba { margin: 0 auto; } }
-.ba { --pos: 50%; position: relative; width: 100%; max-width: 320px; aspect-ratio: 1 / 2; overflow: hidden;
+.ba { --pos: 42%; position: relative; width: 100%; max-width: 320px; aspect-ratio: 21 / 50; overflow: hidden;
   border-radius: var(--radius); border: 1px solid var(--line); box-shadow: var(--shadow); user-select: none; }
 .ba img { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; }
 .ba .ba-after { clip-path: inset(0 0 0 var(--pos)); }
