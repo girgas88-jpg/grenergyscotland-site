@@ -93,6 +93,15 @@ Web3Forms delivery address too.
   Gavin's Samsung Object-eraser edit `20260725_141846(1).jpg` — installation
   unchanged, wall lightened; crop also removes Samsung's "AI-generated
   content" stamp (Gavin informed).
+- **17 Oct 2026, late — kitchen 400 cleaned up.** `boiler-4.jpg` replaced
+  with Gavin's Grok-edited version of the same install
+  (`grok_1792272340249(1).jpg` in Drive): stripped walls repainted, stickers
+  and Baxi badge erased. Installation checked against the original — pipe
+  count and positions, flue, condensate and stat receiver unchanged. Three
+  stray blue marker marks from the edit painted out locally; cropped to drop
+  the window/street view, sink and "AI-generated content" stamp. **The other
+  Grok version (`…249.jpg`) was NOT used — it redrew the stickers as
+  gibberish text.**
 - **17 Oct 2026 — last three cards.** Gas boilers card swapped to the Baxi
   400 kitchen install (`boiler-4`) at Gavin's request. **Landlords card:**
   `landlord-cp12.jpg` is a render of GasAssistIQ's own LGSR template filled
