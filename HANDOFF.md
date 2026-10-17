@@ -28,8 +28,9 @@ Web3Forms account **grenergyscotland@gmail.com**, free plan (250/month,
 resets on the 1st), form **"GR Energy website enquiries"**, access key in
 `contact.html` (public by design). One test enquiry sent through the live
 form (name "TEST - website setup", dummy phone/postcode): redirected to
-`thanks.html` and logged on the dashboard (1 submission, 0 spam). Gavin to
-confirm it reached the grenergyscotland inbox and delete it.
+`thanks.html`, logged on the dashboard (1 submission, 0 spam), and **Gavin
+confirmed it arrived in the grenergyscotland inbox (not spam)**. Proven end
+to end.
 **Gotcha:** Chrome was signed in to Web3Forms as `gavin.ian.ritchie@` — check
 which account owns the form before changing settings. If the business email
 moves to `@grenergyscotland.co.uk`, change the delivery address in Web3Forms.
