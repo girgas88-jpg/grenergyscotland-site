@@ -131,9 +131,7 @@ because GitHub Pages serves it from arbitrary URL paths. Keep it that way.
 
 ### Home page sections
 
-Hero → What I do (six cards, real photos where Gavin has them) → **Recent
-work** (`#work`: before/after slider + swipeable strip with a short job story
-under each photo) → Where I work → FAQ → CTA. The "kit I work with" ghost-drum
+**Redesigned 17-18 Oct 2026 after homecomfort-ses.co.uk** (Gavin's pick), in GR's own black/red: light split **hero** (text left, `boiler-4` right with the Gas Safe badge on its corner) → centred intro + **six two-up photo service cards** (`.svc-grid`, outlined "Discover more" buttons to `services.html#…`) → dark **"Time for a new boiler?"** band (`.feature-band`) → **Recent work** (`#work`: before/after slider + four clickable jobs that open a `<dialog>`) → **Why choose** four columns (`.why-grid`) + Gas Safe explainer (`.gs-row`) → Where I work → FAQ → "Planning a heating project?" band. Headings h1/h2 are Inter **300** (light); buttons are small-caps, square-ish, outlined (`.btn-outline` dark, `.btn-ghost` white on dark), red `.btn-primary` kept for the main call to action. Take their layout and feel only - **never their wording, photos, reviews or manufacturer logos**. The "kit I work with" ghost-drum
 section was **removed 17 Oct 2026** at Gavin's request (Recent work shows the
 same thing with real jobs) — its HTML, JS and CSS are all gone; don't restore it.
 
