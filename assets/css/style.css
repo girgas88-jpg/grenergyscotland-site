@@ -257,7 +257,9 @@ section.alt { background: var(--bg-alt); }
   display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover;
   border-radius: var(--radius); border: 1px solid var(--line); box-shadow: var(--shadow);
 }
-.work-strip figcaption { margin-top: 8px; font-size: .9rem; color: var(--muted); }
+.work-strip figcaption { margin-top: 10px; font-size: .9rem; line-height: 1.5; color: var(--muted); }
+.work-strip figcaption b { display: block; margin-bottom: 4px; color: var(--ink); font-size: .95rem; }
+.ba-hint { font-size: .85rem; color: var(--muted); }
 .work-nav { display: flex; gap: 10px; margin-top: 8px; }
 .work-nav button {
   width: 42px; height: 42px; border-radius: 999px; border: 1px solid var(--line);
