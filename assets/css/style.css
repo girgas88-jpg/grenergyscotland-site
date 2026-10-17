@@ -231,6 +231,22 @@ section.alt { background: var(--bg-alt); }
   border-radius: var(--radius) var(--radius) 0 0; border-bottom: 1px solid var(--line);
 }
 
+/* Before/after: the after image is clipped to --pos; a range input over the
+   top drives it, so it works by mouse, touch and keyboard with no library. */
+.ba-feature { display: grid; grid-template-columns: minmax(0, 320px) minmax(0, 1fr); gap: 32px; align-items: center; margin-bottom: 40px; }
+@media (max-width: 640px) { .ba-feature { grid-template-columns: 1fr; } .ba { margin: 0 auto; } }
+.ba { --pos: 50%; position: relative; width: 100%; max-width: 320px; aspect-ratio: 1 / 2; overflow: hidden;
+  border-radius: var(--radius); border: 1px solid var(--line); box-shadow: var(--shadow); user-select: none; }
+.ba img { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; }
+.ba .ba-after { clip-path: inset(0 0 0 var(--pos)); }
+.ba .ba-line { position: absolute; top: 0; bottom: 0; left: var(--pos); width: 3px; margin-left: -1.5px; background: #fff; box-shadow: 0 0 6px rgba(0,0,0,.5); pointer-events: none; }
+.ba .ba-line::after { content: "\2194"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 38px; height: 38px; border-radius: 999px; background: #fff; color: #16161a; display: grid; place-items: center; font-weight: 700; }
+.ba .ba-tag { position: absolute; bottom: 10px; padding: 3px 8px; border-radius: 6px; background: rgba(0,0,0,.6); color: #fff; font-size: .8rem; font-weight: 700; pointer-events: none; }
+.ba .ba-tag.b { left: 10px; } .ba .ba-tag.a { right: 10px; }
+.ba input[type=range] { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize; }
+.ba input[type=range]:focus-visible + .ba-line { background: var(--flame); }
+
 /* Recent work: swipeable photo strip, no library */
 .work-strip {
   display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory;

@@ -100,3 +100,14 @@
     });
   }
 })();
+
+/* Before/after slider: the range input sets --pos, which clips the after image */
+(function () {
+  var boxes = document.querySelectorAll('.ba');
+  for (var i = 0; i < boxes.length; i++) (function (box) {
+    var r = box.querySelector('input[type=range]');
+    if (!r) return;
+    var set = function () { box.style.setProperty('--pos', r.value + '%'); };
+    r.addEventListener('input', set); set();
+  })(boxes[i]);
+})();
