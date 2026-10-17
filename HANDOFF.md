@@ -39,7 +39,7 @@ Web3Forms delivery address too.
 | **Business email** `@grenergyscotland.co.uk` | Options laid out in the business repo HANDOFF. When chosen: replace `grenergyscotland@gmail.com` site-wide (topbar, footer, hero card, CTA, contact, privacy, JSON-LD) and in Web3Forms. Re-check Namecheap Mail Settings — switching from Email Forwarding changes MX records. |
 | **Virtual phone number** | Gavin wants one. When it exists, add it back (topbar, contact, JSON-LD `telephone`). Until then: no tel: links (content rule 1b). |
 | **Virtual business address** | Gavin wants one. Site now says "Glasgow" only. A virtual address could go in JSON-LD `PostalAddress` and a Google Business Profile — never the home address. |
-| **Photos — still needed** | Live: boiler (×3) and radiator. Gavin's plan is a real photo on every home-page service card. Still needed: **cylinder** (the Megaflo shot `20260725_141846.jpg` is held — mouldy cupboard wall; Gavin to clean it with phone Object eraser and re-drop it in Drive root), **cooker/hob**, **HP60 heat pump**, and a **landlord certificate** example (blank or fully redacted — no tenant/address). Cards without a photo keep their icon. |
+| **Photos — still needed** | Live: boiler (×3), radiator, cylinder. Gavin's plan is a real photo on every home-page service card. Still needed: **cooker/hob**, **HP60 heat pump**, and a **landlord certificate** example (blank or fully redacted — no tenant/address). Cards without a photo keep their icon. |
 | **360° spin** | Gavin asked for one. Needs 24–36 stills shot all the way round one object (or a short video) — can't be made from ordinary photos. The swipeable "Recent work" strip covers the gallery part. |
 | **MCS** | Gavin doesn't hold MCS himself; the partner does. Don't claim it. |
 | **Areas list** | Still Claude's sensible radius around Torrance — Gavin to check. |
@@ -84,6 +84,17 @@ Web3Forms delivery address too.
   swipeable **Recent work** strip (`#work`, CSS scroll-snap + small arrow
   script at the end of `main.js`, no library). Baxi branding in the boiler
   photos accepted by Gavin before the contract check.
+  Later the same day: Megaflo cylinder photo added (card + strip) from
+  Gavin's Samsung Object-eraser edit `20260725_141846(1).jpg` — installation
+  unchanged, wall lightened; crop also removes Samsung's "AI-generated
+  content" stamp (Gavin informed).
+- **17 Oct 2026 — mobile check.** Every page loaded in frames at 320, 360,
+  375, 393 px portrait and 800/852 px landscape. Only fault: `contact.html`
+  scrolled sideways (+13 to +46 px) because the unbreakable email address
+  set the grid column's min-content width. Fixed in CSS (`min-width: 0` on
+  grid children, `overflow-wrap: anywhere` on mailto links and spec cells);
+  re-test clean on all 66 page/size combinations. Menu toggle, photo strip
+  and form checked visually. Not tested on physical iPhone/Android hardware.
 - Earlier: nine pages + `thanks.html` + `404.html`; responsive, dark mode;
   LocalBusiness + FAQPage JSON-LD, sitemap, robots; logo palette; numbered
   Gas Safe badge (kept on About and hero — Gavin confirmed 17 Oct).

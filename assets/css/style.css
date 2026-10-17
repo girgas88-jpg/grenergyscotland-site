@@ -255,6 +255,10 @@ section.alt { background: var(--bg-alt); }
 
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: start; }
 @media (max-width: 860px) { .split { grid-template-columns: 1fr; gap: 34px; } }
+/* Grid items default to min-width:auto, so one long email address could push the
+   column past a 360px phone screen. Let them shrink and let addresses wrap. */
+.split > *, .grid > * { min-width: 0; }
+a[href^="mailto:"], table.spec td { overflow-wrap: anywhere; }
 
 .note {
   border-left: 3px solid var(--flame); background: var(--bg-alt);
