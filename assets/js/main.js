@@ -41,18 +41,21 @@
   }
 })();
 
-/* Recent work strip: arrow buttons scroll one photo at a time */
+/* Recent work: open a job's full story and large photo in the dialog */
 (function () {
-  var strip = document.getElementById('work-strip');
-  if (!strip) return;
-  var nav = strip.parentNode.querySelectorAll('.work-nav button');
-  for (var i = 0; i < nav.length; i++) {
-    nav[i].addEventListener('click', function () {
-      var fig = strip.querySelector('figure');
-      var step = fig ? fig.getBoundingClientRect().width + 16 : 300;
-      strip.scrollBy({ left: step * Number(this.getAttribute('data-dir')), behavior: 'smooth' });
-    });
-  }
+  var dlg = document.getElementById('job-dialog');
+  if (!dlg || typeof dlg.showModal !== 'function') return;
+  var img = dlg.querySelector('img'), h = dlg.querySelector('h3'), p = dlg.querySelector('.job-dialog-text p');
+  var jobs = document.querySelectorAll('.job');
+  for (var i = 0; i < jobs.length; i++) jobs[i].addEventListener('click', function () {
+    img.src = this.getAttribute('data-img'); img.alt = this.getAttribute('data-alt');
+    h.textContent = this.querySelector('.job-text b').textContent;
+    p.innerHTML = this.querySelector('.job-full').innerHTML;
+    dlg.showModal();
+  });
+  dlg.querySelector('.job-close').addEventListener('click', function () { dlg.close(); });
+  // a click on the dark backdrop (outside the box) closes it too
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
 })();
 
 /* Before/after slider: the range input sets --pos, which clips the after image */

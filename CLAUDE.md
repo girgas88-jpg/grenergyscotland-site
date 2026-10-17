@@ -42,10 +42,13 @@ he's approved / listed as an approved installer and has their artwork.
 
 ### 0c. Heat pumps model
 
-New heat pump installs: an MCS-accredited partner designs and supplies; Gavin
-installs under GR Energy Scotland and commissions as the engineer, and is the
-customer's single point of contact. **Don't claim he does heat-loss design or
-holds MCS himself.** The fee he pays the partner is not website copy.
+New heat pump installs, in Gavin's wording (17 Oct 2026, late): working with
+an MCS-accredited partner, **"we carry out the system design and order the
+equipment and materials the job needs"** — never "supply the equipment". Gavin
+installs and commissions as the engineer and is the customer's single point of
+contact. **Don't claim he holds MCS himself.** The fee he pays the partner is
+not website copy. Grants: link Home Energy Scotland's funding page
+(`homeenergyscotland.org/find-funding/`, checked 200 on 17 Oct 2026).
 
 ### 1. VAT
 
@@ -82,10 +85,12 @@ The site currently claims **only** what is verifiable:
   anywhere on the site, at Gavin's request 2026-10-17. Torrance may appear
   only as an area covered. A virtual business address is planned.
 - Diary usually full, book in advance; **no 24-hour emergency cover**
+- **20 years' experience** in heating and gas — confirmed by Gavin 17 Oct 2026
+  and highlighted site-wide (top bar, hero, About, services intro, meta)
 
-**Not claimed, because unconfirmed:** MCS certification, OFTEC, years of
-experience, number of jobs completed, insurance cover, "24/7", guaranteed
-response times, awards, and **any customer review or testimonial**.
+**Not claimed, because unconfirmed:** MCS certification, OFTEC, number of
+jobs completed, insurance cover, "24/7", guaranteed response times, awards,
+and **any customer review or testimonial**.
 
 Do not add a testimonials section with placeholder or invented quotes. Real
 reviews only, attributed, with the customer's agreement.
@@ -101,6 +106,14 @@ mm, litres, kg, °C, l/min throughout. No imperial anywhere.
 ---
 
 ## Structure
+
+**Pages (17 Oct 2026):** `index`, `services` (one page for every service —
+sections `#boilers #cylinders #heat-pumps #radiators #cookers #landlord #faq`,
+overview cards jump to them), `areas`, `about`, `contact`, `privacy`,
+`thanks`, `404`. **`gas-boilers.html`, `unvented-cylinders.html` and
+`heat-pumps.html` are forwarding stubs** (noindex, canonical + meta refresh to
+their services section) so old links and search results keep working — don't
+add content to them, and they are not in the sitemap or the shared-header set.
 
 No templating engine. The `<header>`, `<footer>` and nav markup are **duplicated
 in every HTML file**. This is deliberate — it keeps the repo dependency-free —
