@@ -9,9 +9,43 @@ engineering business in Glasgow. Plain HTML/CSS/JS on GitHub Pages.
 
 Read `HANDOFF.md` for current state and next actions.
 
+**Why the site exists (2026-10-17):** mainly so Stripe (contactless payments
+on Gavin's phone, paying out to Monzo) could verify the business is real. Keep
+it up and keep the business name and contact details consistent with what
+Stripe holds.
+
 ---
 
 ## ⚠️ Content rules — get these wrong and it's a real problem
+
+### 0. Less is more (2026-10-17)
+
+Gavin's rule: **strip it back.** Too much detail reads as AI-written, and
+"less information means less for customers to turn against you". Say what he
+does, not how he does it — no checklists of what a service covers beyond the
+dictated list, no fault-diagnosis detail, no technical sizing tables, nothing
+defensive ("no call centre", "what I won't do"). Don't promise anything he
+hasn't said: service = flue, ventilation, heat input, working pressure and
+safety devices, plus efficiency check and energy-saving advice — no
+electrodes or seals. Standards wording is fixed: *"All work is properly
+tested, commissioned and installed to local building regulations and
+manufacturer's instructions, using quality equipment and materials
+throughout."* Don't add radiator/circulation troubleshooting ("cold at the far
+end") — it invites problems he doesn't want.
+
+### 0b. Baxi and manufacturer logos
+
+**Don't name Baxi anywhere until Gavin has checked his Baxi contract for a
+no-marketing clause.** Heat pump copy says "MCS-accredited partner". No
+manufacturer logos (Baxi, Ideal, Worcester, Vaillant, Megaflo, etc.) unless
+he's approved / listed as an approved installer and has their artwork.
+
+### 0c. Heat pumps model
+
+New heat pump installs: an MCS-accredited partner designs and supplies; Gavin
+installs under GR Energy Scotland and commissions as the engineer, and is the
+customer's single point of contact. **Don't claim he does heat-loss design or
+holds MCS himself.** The fee he pays the partner is not website copy.
 
 ### 1. VAT
 
@@ -43,8 +77,11 @@ The site currently claims **only** what is verifiable:
 
 - Gas Safe register number **962889**
 - G3 qualified for unvented hot water storage
-- Works on air source heat pumps
-- Based in Torrance, covers Glasgow and East Dunbartonshire
+- Installs air source heat pumps (via the partner model above)
+- **Glasgow-based** — no town, postcode or business structure (sole trader)
+  anywhere on the site, at Gavin's request 2026-10-17. Torrance may appear
+  only as an area covered. A virtual business address is planned.
+- Diary usually full, book in advance; **no 24-hour emergency cover**
 
 **Not claimed, because unconfirmed:** MCS certification, OFTEC, years of
 experience, number of jobs completed, insurance cover, "24/7", guaranteed
@@ -125,6 +162,9 @@ involved at all.
 
 - The `access_key` hidden input must hold the real key from web3forms.com.
   Until it does, `main.js` intercepts submit and shows a fallback message.
+  **Web3Forms now needs an account** (app.web3forms.com, as of 2026-10-17) —
+  the old "email in, key out, no account" flow is gone. Gavin signs up himself;
+  Claude can't create accounts or accept terms.
 - `botcheck` is the honeypot — leave it in, leave it hidden.
 - `redirect` points at `thanks.html`, which is `noindex`.
 - Free tier is 250 submissions/month. If it's ever exceeded, submissions are
@@ -161,6 +201,12 @@ DNS at the registrar:
 | A | `@` | `185.199.111.153` |
 
 Then tick **Enforce HTTPS** once the certificate is issued (can take an hour).
+
+DNS is at **Namecheap** (BasicDNS). Set up 2026-10-17. Namecheap's Mail
+Settings (Email Forwarding + its SPF TXT) were left untouched. Gotcha: a
+stale *URL Redirect* host record there threw "Failed to retrieve the record"
+on delete but had in fact gone — reload before retrying. Claude Code's
+safety check blocks Claude from deleting DNS records; Gavin clicks those.
 
 ## Related repos
 

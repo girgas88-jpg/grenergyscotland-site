@@ -1,137 +1,109 @@
 # HANDOFF — grenergyscotland.co.uk
 
-**Updated:** 2026-08-27 (evening)
-**Status:** Site v2 pushed — VAT wording removed, phone number removed
-(email + form only), ghost drum added to the home page. Repo is public.
-**Not yet live** — Pages and DNS still to do.
+**Updated:** 2026-10-17
+**Status:** **LIVE** at http://www.grenergyscotland.co.uk — GitHub Pages on
+(`main` / root), Namecheap DNS pointed at GitHub, bare domain redirects to
+`www`. Site v3 copy pushed: stripped back per Gavin's 17 Oct voice notes.
+**HTTPS pending** (certificate not yet issued at time of writing) and the
+**enquiry form is not connected** yet.
 
 ---
 
-## 🔴 Blocking — the site does nothing until these are done
+## 🔴 Still blocking
 
-### 1. Turn on GitHub Pages
+### 1. Enforce HTTPS
 
-Repo → **Settings → Pages** → Source: *Deploy from a branch* → branch `main`,
-folder `/ (root)` → Save. Custom domain field should pick up
-`www.grenergyscotland.co.uk` from the `CNAME` file.
+Once GitHub issues the certificate (Settings → Pages stops saying "DNS Check
+in Progress"), tick **Enforce HTTPS**. Verify from outside:
+`curl -sI https://www.grenergyscotland.co.uk` → 200, and
+`http://` → 301 to `https://`.
 
-### 2. Point the DNS
+### 2. Connect the enquiry form (Web3Forms)
 
-At whoever `grenergyscotland.co.uk` is registered with:
-
-| Type | Name | Value | TTL |
-|---|---|---|---|
-| CNAME | `www` | `girgas88-jpg.github.io` | default |
-| A | `@` | `185.199.108.153` | default |
-| A | `@` | `185.199.109.153` | default |
-| A | `@` | `185.199.110.153` | default |
-| A | `@` | `185.199.111.153` | default |
-
-The four A records send the bare domain to GitHub so `grenergyscotland.co.uk`
-redirects to `www`. Propagation is usually minutes, occasionally hours. Then
-tick **Enforce HTTPS** in Settings → Pages — the certificate can take up to an
-hour to issue and the box stays greyed out until it does.
-
-### 3. Connect the enquiry form
-
-Sign up at **web3forms.com** with `grenergyscotland@gmail.com` — free, no
-account needed, the key arrives by email. Then in `contact.html`:
-
-```html
-<input type="hidden" name="access_key" value="REPLACE_WITH_WEB3FORMS_ACCESS_KEY">
-```
-
-Replace that value, push, and **send yourself a test enquiry**. Until it's
-replaced, `main.js` blocks submission and tells the visitor to email instead —
-so the form fails safe rather than silently binning leads.
+Web3Forms now needs an account. Gavin: sign up at app.web3forms.com with
+`grenergyscotland@gmail.com` (email link, not "Continue with Google" unless
+that Gmail is the signed-in Google account), create a form, paste the Access
+Key to Claude. Then in `contact.html` replace
+`REPLACE_WITH_WEB3FORMS_ACCESS_KEY`, update the stale "no account required"
+HTML comment above it, push, and send one test enquiry through the live form.
+If the business email moves to `@grenergyscotland.co.uk`, update the
+Web3Forms delivery address too.
 
 ---
 
-## Competitor check (2026-08-27)
+## 🟠 Decisions / actions with Gavin
 
-Looked at local rivals: JDS Gas Services (Kirkintilloch), Absolute Gas
-Services / glasgowgasengineer.co.uk, plus the Able Group and TrustATrader
-listings. Pattern: all phone-first, Gas Safe number prominent; the stronger
-ones (JDS) show **manufacturer accreditation logos — Worcester, Ideal,
-Vaillant, Baxi** — and package pricing; several have Rated People / review
-counts. Weaknesses across the board: dated, text-heavy design, and half have
-no reviews. Our gaps against them: no manufacturer accreditation badges, no
-reviews yet, and (by Gavin's choice) no phone number.
-
-## Logos — read before adding any
-
-- **Gas Safe logo:** DONE — Gavin supplied his own numbered badge artwork
-  (962889); it's live on the hero card and About page as
-  `assets/img/gas-safe-962889.svg`. Never redraw or recolour it.
-- **Baxi:** only add the Baxi (or Baxi Approved Installer) logo if Gavin is
-  actually on their installer scheme, using artwork Baxi supplies. The drum's
-  boiler drawing is deliberately unbranded; the caption says "incl. Baxi"
-  which is a statement of what he works on, not an accreditation claim.
-
-## 🟠 Decisions Gavin needs to make
-
-| Question | Why it matters |
+| Item | Notes |
 |---|---|
-| **Full address or town only?** The site currently shows *"Torrance, Glasgow G64"* — not the full street address, since it's the home address. A full address helps local SEO and is required for a Google Business Profile, but it's public forever. | `index.html`, `about.html`, `contact.html`, footer on every page, and the JSON-LD `PostalAddress` in `index.html` |
-| **MCS certification** — not claimed anywhere on the site, because it wasn't in the business repo. Grant-funded heat pump work generally requires it. If you hold it, say so on `heat-pumps.html`; it's a strong differentiator. | `heat-pumps.html` |
-| **Public liability insurance** — not mentioned. Customers ask. If you're covered, worth a line on `about.html` with the cover amount. | `about.html` |
-| **Emergency / out-of-hours** — the site deliberately promises no response time. Your pricing basis has an out-of-hours rate, so if you want that work, it needs saying somewhere. | `services.html`, `contact.html` |
-| **No phone number** — removed at your request. Both local competitors are phone-first because breakdown customers phone. Reconsider a forwarding/virtual number if enquiry volume disappoints. | site-wide |
-| **Areas list** — I built it from a sensible radius around Torrance. Check it: anything on there you won't travel to, and anything missing you would. | `areas.html` |
+| **Baxi contract** — check for a no-marketing clause | Until checked, the site names no manufacturer. Heat pump copy says "MCS-accredited partner". If the contract allows it, Baxi can go back into the heat pump FAQ and the drum caption. |
+| **Business email** `@grenergyscotland.co.uk` | Options laid out in the business repo HANDOFF. When chosen: replace `grenergyscotland@gmail.com` site-wide (topbar, footer, hero card, CTA, contact, privacy, JSON-LD) and in Web3Forms. Re-check Namecheap Mail Settings — switching from Email Forwarding changes MX records. |
+| **Virtual phone number** | Gavin wants one. When it exists, add it back (topbar, contact, JSON-LD `telephone`). Until then: no tel: links (content rule 1b). |
+| **Virtual business address** | Gavin wants one. Site now says "Glasgow" only. A virtual address could go in JSON-LD `PostalAddress` and a Google Business Profile — never the home address. |
+| **Photos** | Gavin wants real job photos throughout (installs, boilers, radiators, before/after). Needs him to send them — landscape, good light, no customer house numbers or faces. |
+| **MCS** | Gavin doesn't hold MCS himself; the partner does. Don't claim it. |
+| **Areas list** | Still Claude's sensible radius around Torrance — Gavin to check. |
 
 ---
 
 ## 🟡 Worth doing soon
 
-- **Photographs.** The site has no images at all beyond the favicon. Photos of
-  actual jobs — a tidy boiler install, a cylinder in a cupboard, the van —
-  would lift it more than any copy change. Shoot landscape, good light, and
-  they'll drop into the service pages.
-- **Google Business Profile.** For a local trade this drives more calls than the
-  website itself. Needs the address decision above settled first.
-- **Real reviews.** Deliberately none on the site — inventing them is out.
-  Once you've a few Google reviews, they can be quoted with attribution.
-- **Upload the PNG pack.** Gavin's real logo and numbered Gas Safe badge are
-  live (SVG-wrapped — see CLAUDE.md). Two raster files still need uploading
-  via github.com → repo → `assets/img` → *Add file → Upload files*:
-  `og-image.png` (social share previews reference it) and optionally
-  `logo.png` (referenced by the JSON-LD `logo` field). Claude has the files
-  ready to send whenever.
+- **Upload the PNG pack** — `og-image.png` (social previews) and optionally
+  `logo.png` (JSON-LD `logo`) via github.com → `assets/img` → Upload files.
+- **Google Business Profile** — once the virtual address exists.
+- **Real reviews** — once there are Google reviews, quote with attribution.
 
 ---
 
 ## 🟢 Done
 
-- Nine pages: home, services, gas boilers, unvented cylinders, heat pumps,
-  areas, about, contact, privacy — plus `thanks.html` and `404.html`
-- Responsive layout, mobile nav, dark mode via `prefers-color-scheme`
-- `LocalBusiness` + `FAQPage` structured data, `sitemap.xml`, `robots.txt`
-- Enquiry form with honeypot and a fail-safe guard until the key is set
-- Copy checked against `GR-Energy-Scotland/CLAUDE.md`: no VAT references,
-  no England-only Building Regs wording, no invented credentials or reviews
-- Real logo in the header site-wide, molecule favicon, numbered Gas Safe
-  badge on the hero card and About page; site rethemed to the logo's
-  black/grey/red palette (2026-08-27)
+- **17 Oct 2026 — went live.** Pages enabled; Namecheap DNS: `www` CNAME →
+  `girgas88-jpg.github.io.`, four `@` A records → GitHub; stale URL Redirect
+  removed; mail settings untouched. Public WHOIS checked: Nominet redacts the
+  registrant name, address and email.
+- **17 Oct 2026 — copy stripped back** (16 inbox entries): shorter copy on
+  every page; servicing promises cut to flue, ventilation, heat input,
+  working pressure, safety devices + efficiency/energy advice; replacement
+  page loses condensate/sludge detail; unvented page loses technical
+  checklist, discharge materials and sizing table; heat pump page rewritten
+  to the partner model; About loses sole trader, postcode, "no office, no
+  call centre" and the "What I won't do" card, gains "same engineer start to
+  finish" and "diary's full, book ahead, no 24-hour cover"; new **Landlords**
+  (`services.html#landlord`) and **Cookers, hobs & fires**
+  (`services.html#cookers`) sections, both also on the home page; power
+  flushing and radiator balancing/"far end of the house" copy removed;
+  "not every heating engineer holds G3" removed; "incl. Baxi" drum caption
+  removed; contact form gains a cooker/hob/fire option and its postcode
+  placeholder is no longer Gavin's real postcode; address site-wide is
+  "Glasgow".
+- Earlier: nine pages + `thanks.html` + `404.html`; responsive, dark mode;
+  LocalBusiness + FAQPage JSON-LD, sitemap, robots; logo palette; numbered
+  Gas Safe badge (kept on About and hero — Gavin confirmed 17 Oct).
+
+---
+
+## Competitor check (2026-08-27)
+
+Local rivals (JDS Gas Services, Absolute Gas Services, Able Group,
+TrustATrader listings) are phone-first, show Gas Safe numbers prominently, and
+the stronger ones show manufacturer accreditation logos and package pricing.
+Our gaps: no accreditation badges, no reviews yet, no phone number (virtual
+number now planned).
 
 ---
 
 ## Gotchas for next session
 
-- **Header/footer are duplicated in all 11 HTML files.** Site-wide changes need
-  a `sed` across `*.html`, not an edit to one file.
-- **`404.html` uses root-relative links** (`/index.html`) on purpose. Don't
-  "fix" them to relative.
-- **FAQ answers exist twice** — in the visible HTML and in the `FAQPage`
-  JSON-LD. Edit both or the structured data goes stale.
-- **Don't delete `CNAME`.** GitHub's Pages UI rewrites it; losing it drops the
-  custom domain and the site 404s on the real URL.
-- **`.nojekyll` matters** — without it GitHub runs Jekyll over the repo and can
-  swallow files beginning with an underscore.
-- **Ghost drum:** `#kit` section on `index.html` + JS at the bottom of
-  `main.js`. The drum fades the `svg` only — don't move the opacity onto the
-  `figure` or the captions wash out. Reduced-motion users get a static row.
-- **VAT and the phone number were deliberately removed** on 2026-08-27 —
-  don't "restore" them from an old commit.
-- **Base64 assets are fragile to hand-edit** — a single wrong character
-  corrupts the image. If an asset needs changing, regenerate it from the
-  source PNG rather than editing the SVG wrapper, and byte-verify after push.
+- **Header/footer are duplicated in all 11 HTML files.** Site-wide changes
+  need a scripted replace across `*.html`, not an edit to one file.
+- **`404.html` uses root-relative links** on purpose.
+- **FAQ answers exist twice** — visible HTML and `FAQPage` JSON-LD. Edit both.
+  A quick node check comparing `<summary>`/answer pairs to the JSON-LD caught
+  nothing on 17 Oct; rerun it after FAQ edits.
+- **Don't delete `CNAME`.**
+- **`.nojekyll` matters.**
+- **Ghost drum:** fades the `svg` only, not the `figure`.
+- **VAT and the phone number were deliberately removed** — don't restore
+  from old commits (a *virtual* number is a new decision, see above).
+- **Base64 assets are fragile to hand-edit.**
+- **Line endings:** working copies are a CRLF/LF mix (`text=auto`). Scripted
+  edits must handle both; `sed -i` in Git Bash strips CRs. Commits normalise.
