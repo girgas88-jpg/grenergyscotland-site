@@ -66,7 +66,7 @@ moves to `@grenergyscotland.co.uk`, change the delivery address in Web3Forms.
 
 ## 🟢 Done
 
-- **18 Oct 2026 — Gas Safe badge + heat pump servicing (Ash voice notes).** Hero badge had its number cropped: `.hero-photo img` (4:5, `object-fit: cover`, meant for the boiler photo) also hit the badge. Fixed with `aspect-ratio: auto` on `.hero-photo .gs-badge`; checked live at 1376 px. Heat pump **servicing** added (Gavin: "a really good market") to the home card, services overview card, `#heat-pumps` section (line + tick, card retitled) and JSON-LD offer. No makes or service checklist claimed (rule 0).
+- **18 Oct 2026 — Gas Safe badge + heat pump servicing (Ash voice notes).** Hero badge had its number cropped: `.hero-photo img` (4:5, `object-fit: cover`, meant for the boiler photo) also hit the badge. Fixed with `aspect-ratio: auto` on `.hero-photo .gs-badge`; checked live at 1376 px. Heat pump **servicing** added (Gavin: "a really good market") to the home card, services overview card, `#heat-pumps` section (line + tick, card retitled) and JSON-LD offer. No makes or service checklist claimed (rule 0). Also removed "show parts and labour separately on the bill" from the boilers repairs line: Gavin doesn't always itemise, so the site must not promise it (now in CLAUDE.md rule 3).
 - **17 Oct 2026 — went live.** Pages enabled; Namecheap DNS: `www` CNAME →
   `girgas88-jpg.github.io.`, four `@` A records → GitHub; stale URL Redirect
   removed; mail settings untouched. Public WHOIS checked: Nominet redacts the

@@ -89,7 +89,7 @@ The site currently claims **only** what is verifiable:
   and highlighted site-wide (top bar, hero, About, services intro, meta)
 
 **Not claimed, because unconfirmed:** MCS certification, OFTEC, number of
-jobs completed, insurance cover, "24/7", guaranteed response times, awards,
+jobs completed, insurance cover, itemised bills (parts and labour shown separately — Gavin doesn't always do it, 18 Oct 2026), "24/7", guaranteed response times, awards,
 and **any customer review or testimonial**.
 
 Do not add a testimonials section with placeholder or invented quotes. Real
