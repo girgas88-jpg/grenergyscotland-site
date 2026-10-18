@@ -157,7 +157,7 @@ img { max-width: 100%; height: auto; display: block; }
 .hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: center; }
 .hero-photo { position: relative; margin: 0; }
 .hero-photo img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 30%; border-radius: 4px; box-shadow: var(--shadow); }
-.hero-photo .gs-badge { position: absolute; left: -18px; bottom: -18px; width: 92px; box-shadow: var(--shadow); }
+.hero-photo .gs-badge { aspect-ratio: auto; position: absolute; left: -18px; bottom: -18px; width: 92px; box-shadow: var(--shadow); }
 .eyebrow {
   display: inline-block; font-size: .78rem; font-weight: 700; letter-spacing: .12em;
   text-transform: uppercase; color: var(--flame); margin-bottom: 14px;

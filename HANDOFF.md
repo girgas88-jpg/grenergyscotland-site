@@ -1,6 +1,6 @@
 # HANDOFF — grenergyscotland.co.uk
 
-**Updated:** 2026-10-17
+**Updated:** 2026-10-18
 **Status:** **LIVE over HTTPS** at https://www.grenergyscotland.co.uk —
 GitHub Pages on (`main` / root), Namecheap DNS pointed at GitHub, Let's
 Encrypt certificate for `www.grenergyscotland.co.uk` (auto-renewed by GitHub),
@@ -66,6 +66,7 @@ moves to `@grenergyscotland.co.uk`, change the delivery address in Web3Forms.
 
 ## 🟢 Done
 
+- **18 Oct 2026 — Gas Safe badge + heat pump servicing (Ash voice notes).** Hero badge had its number cropped: `.hero-photo img` (4:5, `object-fit: cover`, meant for the boiler photo) also hit the badge. Fixed with `aspect-ratio: auto` on `.hero-photo .gs-badge`; checked live at 1376 px. Heat pump **servicing** added (Gavin: "a really good market") to the home card, services overview card, `#heat-pumps` section (line + tick, card retitled) and JSON-LD offer. No makes or service checklist claimed (rule 0).
 - **17 Oct 2026 — went live.** Pages enabled; Namecheap DNS: `www` CNAME →
   `girgas88-jpg.github.io.`, four `@` A records → GitHub; stale URL Redirect
   removed; mail settings untouched. Public WHOIS checked: Nominet redacts the
