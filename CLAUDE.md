@@ -107,13 +107,23 @@ mm, litres, kg, °C, l/min throughout. No imperial anywhere.
 
 ## Structure
 
-**Pages (17 Oct 2026):** `index`, `services` (one page for every service —
-sections `#boilers #cylinders #heat-pumps #radiators #cookers #landlord #faq`,
-overview cards jump to them), `areas`, `about`, `contact`, `privacy`,
-`thanks`, `404`. **`gas-boilers.html`, `unvented-cylinders.html` and
-`heat-pumps.html` are forwarding stubs** (noindex, canonical + meta refresh to
-their services section) so old links and search results keep working — don't
-add content to them, and they are not in the sitemap or the shared-header set.
+**Pages (25 Oct 2026):** `index`, `services` (overview only: six cards, one
+per service, each opening that service's own page), the six **service pages**
+`gas-boilers`, `unvented-cylinders`, `heat-pumps`, `radiators`,
+`cookers-hobs-fires`, `landlords`, then `areas`, `about`, `contact`,
+`privacy`, `thanks`, `404`.
+
+**Why one page per service (Gavin's voice notes, 25 Oct 2026):** the old
+single services page, where every card scrolled down to a long description
+block, read as "too wordy". Each service now has its own page holding its
+description and its own FAQs (with their own `FAQPage` JSON-LD); the services
+page keeps no descriptions and no FAQ. The service pages are **not in the
+nav** ("hidden" in Gavin's words) - they're reached from the services cards,
+the home-page photo tiles and the footer - but they are indexable and in the
+sitemap. The first three reuse the filenames of the old 17 Oct forwarding
+stubs, so old links and search results land on a real page again. Old
+`services.html#boilers`-style links are sent to the right page by a few lines
+at the end of `main.js`; if a page is renamed, update that map too.
 
 No templating engine. The `<header>`, `<footer>` and nav markup are **duplicated
 in every HTML file**. This is deliberate — it keeps the repo dependency-free —
@@ -131,7 +141,7 @@ because GitHub Pages serves it from arbitrary URL paths. Keep it that way.
 
 ### Home page sections
 
-**Redesigned 17-18 Oct 2026 after homecomfort-ses.co.uk** (Gavin's pick), in GR's own black/red: light split **hero** (text left, `boiler-4` right with the Gas Safe badge on its corner) → centred intro + **six two-up photo service cards** (`.svc-grid`, outlined "Discover more" buttons to `services.html#…`) → dark **"Time for a new boiler?"** band (`.feature-band`) → **Recent work** (`#work`: before/after slider + four clickable jobs that open a `<dialog>`) → **Why choose** four columns (`.why-grid`) + Gas Safe explainer (`.gs-row`) → Where I work → FAQ → "Planning a heating project?" band. Headings h1/h2 are Inter **300** (light); buttons are small-caps, square-ish, outlined (`.btn-outline` dark, `.btn-ghost` white on dark), red `.btn-primary` kept for the main call to action. Take their layout and feel only - **never their wording, photos, reviews or manufacturer logos**. The "kit I work with" ghost-drum
+**Redesigned 17-18 Oct 2026 after homecomfort-ses.co.uk** (Gavin's pick), in GR's own black/red: light split **hero** (text left, `boiler-4` right with the Gas Safe badge on its corner) → **six photo tiles** (`.svc-tiles`, three across; since 25 Oct just the photo with the service name over it, no heading or text - Gavin: "keep the home page with just the pictures of services" - each opens that service's page) → dark **"Time for a new boiler?"** band (`.feature-band`) → **Recent work** (`#work`: before/after slider + four clickable jobs that open a `<dialog>`) → **Why choose** four columns (`.why-grid`) + Gas Safe explainer (`.gs-row`) → Where I work → FAQ → "Planning a heating project?" band. Headings h1/h2 are Inter **300** (light); buttons are small-caps, square-ish, outlined (`.btn-outline` dark, `.btn-ghost` white on dark), red `.btn-primary` kept for the main call to action. Take their layout and feel only - **never their wording, photos, reviews or manufacturer logos**. The "kit I work with" ghost-drum
 section was **removed 17 Oct 2026** at Gavin's request (Recent work shows the
 same thing with real jobs) — its HTML, JS and CSS are all gone; don't restore it.
 
@@ -229,7 +239,7 @@ safety check blocks Claude from deleting DNS records; Gavin clicks those.
 
 Both on **grenergyscotland@gmail.com**.
 
-- **GoatCounter** — `grenergyscotland.goatcounter.com`. One `<script data-goatcounter=...>` line just before `</head>` on the 8 real pages (incl. `thanks.html`, which counts form enquiries, and `404.html`). **Not** on the three forwarding stubs — they'd double-count the redirect. Any new page needs the line too. Cookieless, so no consent banner (keeps rule 0). Gavin excludes his own visits by opening `/#toggle-goatcounter` once per browser.
+- **GoatCounter** — `grenergyscotland.goatcounter.com`. One `<script data-goatcounter=...>` line just before `</head>` on all 14 pages (incl. the six service pages, `thanks.html`, which counts form enquiries, and `404.html`). Any new page needs the line too. Cookieless, so no consent banner (keeps rule 0). Gavin excludes his own visits by opening `/#toggle-goatcounter` once per browser.
 - **Google Search Console** — URL-prefix property `https://www.grenergyscotland.co.uk/`, verified by the **HTML file `google046f1be6092b66ba.html` in the repo root. Never delete or rename it** — the site loses verification. `sitemap.xml` submitted 25 Oct.
 - **Home Assistant feed (25 Oct 2026):** `site_stats.py` in `Documents\App-Backups` on the rig reads the GoatCounter API (key `goatcounter_token` in `limits.local.json`, Read statistics only) and POSTs to a local-only HA webhook; automation "GR Energy website stats (from rig)" fills `input_number.website_*` / `input_text.website_*`, shown in the "GR Energy website" block on the Tech Overview dashboard (`gasassistiq-status`). Hourly via scheduled task **GR Energy site stats**. Enquiries = hits on any path containing `thanks` — if `thanks.html` is ever renamed, update the script.
 - `privacy.html` Cookies section describes both. If you add any other tracking, update it — and anything that sets cookies needs a consent banner under PECR, so ask Gavin first.

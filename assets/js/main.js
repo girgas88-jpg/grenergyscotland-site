@@ -68,3 +68,12 @@
     r.addEventListener('input', set); set();
   })(boxes[i]);
 })();
+
+/* Old links to a services.html#section (search results, bookmarks) go to that
+   service's own page - the sections moved out on 25 Oct 2026 */
+(function () {
+  var to = { boilers: 'gas-boilers.html', cylinders: 'unvented-cylinders.html', 'heat-pumps': 'heat-pumps.html',
+    radiators: 'radiators.html', cookers: 'cookers-hobs-fires.html', landlord: 'landlords.html' };
+  var h = location.hash.slice(1);
+  if (/\/services\.html$/.test(location.pathname) && to[h]) location.replace(to[h]);
+})();

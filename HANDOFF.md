@@ -66,6 +66,7 @@ moves to `@grenergyscotland.co.uk`, change the delivery address in Web3Forms.
 
 ## 🟢 Done
 
+- **25 Oct 2026 — one page per service (four Ash voice notes).** The services page was "too wordy": its six cards now open `gas-boilers`, `unvented-cylinders`, `heat-pumps`, `radiators`, `cookers-hobs-fires` and `landlords.html`, each holding that service's existing description and FAQs, moved word for word (no new copy). The description blocks and FAQ are gone from the services page. The home page services section is now just the six photos with the service name over each; footer links on every page go to the new pages. Not in the nav, but in the sitemap. Checked locally at 1376 and 390 px: all links resolve, no sideways scroll, old `services.html#…` links redirect. **Re-submit the sitemap in Search Console** so Google picks up the six pages.
 - **25 Oct 2026 — visitor stats.** Before today nothing counted visits (GitHub Pages has no analytics). Added **Google Search Console** (verified via `google046f1be6092b66ba.html`, sitemap submitted; first data expected ~27 Oct and should include search data from before verification) and **GoatCounter** (`grenergyscotland.goatcounter.com`, script on all 8 real pages). Privacy notice updated. Details in CLAUDE.md "Analytics".
 
 - **18 Oct 2026 — Gas Safe badge + heat pump servicing (Ash voice notes).** Hero badge had its number cropped: `.hero-photo img` (4:5, `object-fit: cover`, meant for the boiler photo) also hit the badge. Fixed with `aspect-ratio: auto` on `.hero-photo .gs-badge`; checked live at 1376 px. Heat pump **servicing** added (Gavin: "a really good market") to the home card, services overview card, `#heat-pumps` section (line + tick, card retitled) and JSON-LD offer. No makes or service checklist claimed (rule 0). Also removed "show parts and labour separately on the bill" from the boilers repairs line: Gavin doesn't always itemise, so the site must not promise it (now in CLAUDE.md rule 3).
@@ -149,7 +150,7 @@ number now planned).
 
 ## Gotchas for next session
 
-- **Header/footer are duplicated in all 8 real HTML pages (the 3 forwarding stubs have none).** Site-wide changes
+- **Header/footer are duplicated in all 14 HTML pages (since 25 Oct the old forwarding stubs are real service pages).** Site-wide changes
   need a scripted replace across `*.html`, not an edit to one file.
 - **`404.html` uses root-relative links** on purpose.
 - **FAQ answers exist twice** — visible HTML and `FAQPage` JSON-LD. Edit both.
