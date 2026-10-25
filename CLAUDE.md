@@ -231,6 +231,7 @@ Both on **grenergyscotland@gmail.com**.
 
 - **GoatCounter** — `grenergyscotland.goatcounter.com`. One `<script data-goatcounter=...>` line just before `</head>` on the 8 real pages (incl. `thanks.html`, which counts form enquiries, and `404.html`). **Not** on the three forwarding stubs — they'd double-count the redirect. Any new page needs the line too. Cookieless, so no consent banner (keeps rule 0). Gavin excludes his own visits by opening `/#toggle-goatcounter` once per browser.
 - **Google Search Console** — URL-prefix property `https://www.grenergyscotland.co.uk/`, verified by the **HTML file `google046f1be6092b66ba.html` in the repo root. Never delete or rename it** — the site loses verification. `sitemap.xml` submitted 25 Oct.
+- **Home Assistant feed (25 Oct 2026):** `site_stats.py` in `Documents\App-Backups` on the rig reads the GoatCounter API (key `goatcounter_token` in `limits.local.json`, Read statistics only) and POSTs to a local-only HA webhook; automation "GR Energy website stats (from rig)" fills `input_number.website_*` / `input_text.website_*`, shown in the "GR Energy website" block on the Tech Overview dashboard (`gasassistiq-status`). Hourly via scheduled task **GR Energy site stats**. Enquiries = hits on any path containing `thanks` — if `thanks.html` is ever renamed, update the script.
 - `privacy.html` Cookies section describes both. If you add any other tracking, update it — and anything that sets cookies needs a consent banner under PECR, so ask Gavin first.
 
 ## Related repos
