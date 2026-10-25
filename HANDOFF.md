@@ -66,6 +66,7 @@ moves to `@grenergyscotland.co.uk`, change the delivery address in Web3Forms.
 
 ## 🟢 Done
 
+- **25 Oct 2026 — copy in Gavin's voice.** Every page except privacy rewritten shorter and first person, from ~230 of his own chat messages; same facts, fixed wording untouched, FAQ JSON-LD re-checked. Gavin approved before push. Rule now in CLAUDE.md 0a.
 - **25 Oct 2026 — one page per service (four Ash voice notes).** The services page was "too wordy": its six cards now open `gas-boilers`, `unvented-cylinders`, `heat-pumps`, `radiators`, `cookers-hobs-fires` and `landlords.html`, each holding that service's existing description and FAQs, moved word for word (no new copy). The description blocks and FAQ are gone from the services page. The home page services section is now just the six photos with the service name over each; footer links on every page go to the new pages. Not in the nav, but in the sitemap. Checked locally at 1376 and 390 px: all links resolve, no sideways scroll, old `services.html#…` links redirect. **Re-submit the sitemap in Search Console** so Google picks up the six pages.
 - **25 Oct 2026 — visitor stats.** Before today nothing counted visits (GitHub Pages has no analytics). Added **Google Search Console** (verified via `google046f1be6092b66ba.html`, sitemap submitted; first data expected ~27 Oct and should include search data from before verification) and **GoatCounter** (`grenergyscotland.goatcounter.com`, script on all 8 real pages). Privacy notice updated. Details in CLAUDE.md "Analytics".
 

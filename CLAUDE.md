@@ -33,6 +33,16 @@ manufacturer's instructions, using quality equipment and materials
 throughout."* Don't add radiator/circulation troubleshooting ("cold at the far
 end") — it invites problems he doesn't want.
 
+### 0a. Gavin's voice (25 Oct 2026)
+
+Gavin asked for the whole site to sound like him. Copy is first person,
+short and plain, the way he talks: "I quote the job and I do the job",
+"tell you straight", "get in touch early" (never "to avoid disappointment").
+No sales phrasing, very few dashes (they read as AI-written). Keep it
+professional, though: no slang beyond the odd plain Scots phrase, and still
+no new claims. The standards sentence and heat pump partner wording below
+stay word for word.
+
 ### 0b. Baxi and manufacturer logos
 
 **Don't name Baxi anywhere until Gavin has checked his Baxi contract for a
