@@ -1,6 +1,6 @@
 # HANDOFF — grenergyscotland.co.uk
 
-**Updated:** 2026-10-18
+**Updated:** 2026-10-25
 **Status:** **LIVE over HTTPS** at https://www.grenergyscotland.co.uk —
 GitHub Pages on (`main` / root), Namecheap DNS pointed at GitHub, Let's
 Encrypt certificate for `www.grenergyscotland.co.uk` (auto-renewed by GitHub),
@@ -65,6 +65,8 @@ moves to `@grenergyscotland.co.uk`, change the delivery address in Web3Forms.
 ---
 
 ## 🟢 Done
+
+- **25 Oct 2026 — visitor stats.** Before today nothing counted visits (GitHub Pages has no analytics). Added **Google Search Console** (verified via `google046f1be6092b66ba.html`, sitemap submitted; first data expected ~27 Oct and should include search data from before verification) and **GoatCounter** (`grenergyscotland.goatcounter.com`, script on all 8 real pages). Privacy notice updated. Details in CLAUDE.md "Analytics".
 
 - **18 Oct 2026 — Gas Safe badge + heat pump servicing (Ash voice notes).** Hero badge had its number cropped: `.hero-photo img` (4:5, `object-fit: cover`, meant for the boiler photo) also hit the badge. Fixed with `aspect-ratio: auto` on `.hero-photo .gs-badge`; checked live at 1376 px. Heat pump **servicing** added (Gavin: "a really good market") to the home card, services overview card, `#heat-pumps` section (line + tick, card retitled) and JSON-LD offer. No makes or service checklist claimed (rule 0). Also removed "show parts and labour separately on the bill" from the boilers repairs line: Gavin doesn't always itemise, so the site must not promise it (now in CLAUDE.md rule 3).
 - **17 Oct 2026 — went live.** Pages enabled; Namecheap DNS: `www` CNAME →
@@ -154,6 +156,7 @@ number now planned).
   A quick node check comparing `<summary>`/answer pairs to the JSON-LD caught
   nothing on 17 Oct; rerun it after FAQ edits.
 - **Don't delete `CNAME`.**
+- **Don't delete `google046f1be6092b66ba.html`** — it keeps Search Console verified.
 - **`.nojekyll` matters.**
 - **VAT and the phone number were deliberately removed** — don't restore
   from old commits (a *virtual* number is a new decision, see above).
