@@ -1,6 +1,6 @@
 # HANDOFF — grenergyscotland.co.uk
 
-**Updated:** 2026-10-25
+**Updated:** 2026-11-18
 **Status:** **LIVE over HTTPS** at https://www.grenergyscotland.co.uk —
 GitHub Pages on (`main` / root), Namecheap DNS pointed at GitHub, Let's
 Encrypt certificate for `www.grenergyscotland.co.uk` (auto-renewed by GitHub),
@@ -66,6 +66,7 @@ moves to `@grenergyscotland.co.uk`, change the delivery address in Web3Forms.
 
 ## 🟢 Done
 
+- **18 Nov 2026 — Humanizer trim (less wordy).** Gavin approved before push. Cut repetition and AI tells only, no new claims, fixed wording untouched: home 'Why choose' four cards removed (heading, one-liner and Gas Safe row kept), boiler band loses the 'Commissioned to…' tick and the Survey•Supply•Install•Commission strip, 'A few recent jobs' (one is Edinburgh), radiator summary 'old sandstone'; landlords intro rewritten shorter; boilers repairs/servicing trimmed, dashes out (FAQ JSON-LD question updated to match); heat pump card down to two ticks; unvented card G3 sentence cut (FAQ covers it); radiators/cookers prose cut to one line each (tick lists kept); dashes out on contact/thanks. **Open:** Baxi still named in home job cards (Baxi 800/105e/400) despite rule 0b, waiting on Gavin; About 'At a glance' table kept for now.
 - **25 Oct 2026 — copy in Gavin's voice.** Every page except privacy rewritten shorter and first person, from ~230 of his own chat messages; same facts, fixed wording untouched, FAQ JSON-LD re-checked. Gavin approved before push. Rule now in CLAUDE.md 0a.
 - **25 Oct 2026 — one page per service (four Ash voice notes).** The services page was "too wordy": its six cards now open `gas-boilers`, `unvented-cylinders`, `heat-pumps`, `radiators`, `cookers-hobs-fires` and `landlords.html`, each holding that service's existing description and FAQs, moved word for word (no new copy). The description blocks and FAQ are gone from the services page. The home page services section is now just the six photos with the service name over each; footer links on every page go to the new pages. Not in the nav, but in the sitemap. Checked locally at 1376 and 390 px: all links resolve, no sideways scroll, old `services.html#…` links redirect. **Re-submit the sitemap in Search Console** so Google picks up the six pages.
 - **25 Oct 2026 — visitor stats.** Before today nothing counted visits (GitHub Pages has no analytics). Added **Google Search Console** (verified via `google046f1be6092b66ba.html`, sitemap submitted; first data expected ~27 Oct and should include search data from before verification) and **GoatCounter** (`grenergyscotland.goatcounter.com`, script on all 8 real pages). Privacy notice updated. Details in CLAUDE.md "Analytics".
